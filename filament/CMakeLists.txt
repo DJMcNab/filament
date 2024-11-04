@@ -554,6 +554,7 @@ target_link_libraries(${TARGET} PUBLIC math)
 target_link_libraries(${TARGET} PUBLIC utils)
 target_link_libraries(${TARGET} PUBLIC filaflat)
 target_link_libraries(${TARGET} PUBLIC filabridge)
+target_link_libraries(${TARGET} PUBLIC filavello)
 target_link_libraries(${TARGET} PUBLIC ibl-lite)
 
 if (FILAMENT_ENABLE_MATDBG)

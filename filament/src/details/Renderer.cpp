@@ -57,6 +57,7 @@
 #include <utils/Panic.h>
 #include <utils/Systrace.h>
 #include <utils/debug.h>
+#include <filavello/TextRenderer.h>
 
 #include <chrono>
 #include <limits>
@@ -120,6 +121,8 @@ FRenderer::FRenderer(FEngine& engine) :
             &engine.debug.shadowmap.display_shadow_texture_power);
     debugRegistry.registerProperty("d.stereo.combine_multiview_images",
         &engine.debug.stereo.combine_multiview_images);
+
+    validate_rust_working();
 
     DriverApi& driver = engine.getDriverApi();
 
